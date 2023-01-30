@@ -95,7 +95,8 @@ Do the following:
 
 function dogYears(dogAge){
   /*add your code here*/
-  return dogAge * 7
+  let myDogAge = dogAge * 7
+  return myDogAge
 }
 
 dogYears(2)
@@ -146,12 +147,38 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
+function hungryDog(dogWeight, dogAgeinYears){
   /*add your code here*/
+
+  if(dogAgeinYears >= 1 && dogWeight <= 5 ){
+    return dogWeight/dogAgeinYears
+  }
+  else if(dogAgeinYears >= 1 && dogWeight <= 10 ){
+    return
+  }
+  else if(dogAgeinYears >= 1 && dogWeight <= 15 ){
+    return
+  }
+  else if(dogAgeinYears >= 1 && dogWeight >= 15 ){
+    return
+  }
+  else if(dogAgeinYears <= 1 && dogWeight <= 10 ){
+    return
+  } 
+  else if(dogAgeinYears <= 1 && dogWeight <= 10 ){
+    return
+  } 
+  else if(dogAgeinYears <= 1 && dogWeight <= 10 ){
+    return
+  }
+  else if(dogAgeinYears < 1){
+
+    return
+  }
 }
 
-
-
+ 
+hungryDog(1,1)
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Rock, Paper, Scissors - Let's play against the computer!
@@ -173,8 +200,14 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
+let computer = Math.random();
+let user = '';
+
 function game(user, computer){
   /*add your code here*/
+
+
+   
 }
 
 
@@ -190,8 +223,9 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(kilometers){
   /*add your code here*/
+  return kilometers/1.609
 }
 
 
@@ -204,7 +238,7 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
+function feet(centimeters){
   /*add your code here*/
 }
 
