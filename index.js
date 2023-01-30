@@ -19,9 +19,9 @@ Do the following:
 
    HINT: no function required
 */
-var votingAge = 18
+var votingAge = 18;
 
-if (votingAge > 18) {
+if (votingAge >= 18) {
   console.log(true);
 } else {
   console.log(false);
@@ -43,14 +43,11 @@ Do the following:
 let value1 = 1
 let value2 = 7
 
-if (value1 == 1 && value2 == 7) {
-  console.log(value1)
-} else if(value1 > 1){
-  let value1 = 0
-  console.log(value1);
+if (value2 == 7) {
+  value1 = 0
 }
 
-
+console.log(value1)
 
 
 /*
@@ -77,8 +74,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(num1, num2){
-  return num1 * num2;
+function multiply(a, b){
+  return a * b;
 }
 
 multiply(2, 7)
@@ -151,26 +148,22 @@ function hungryDog(dogWeight, dogAgeinYears){
   /*add your code here*/
 
   if(dogAgeinYears >= 1 && dogWeight <= 5 ){
-    return dogWeight * 0.05
+    return dogWeight * 0.05;
+  } else if(dogAgeinYears >= 1 && dogWeight <= 10 ){
+    return dogWeight * 0.04;
+  } else if(dogAgeinYears >= 1 &&   dogWeight <= 15 ){
+    return dogWeight * 0.03;
+  } else if(dogAgeinYears >= 1 && dogWeight >= 15 ){
+    return dogWeight * 0.02;
+  }  else if(dogAgeinYears <= 0.583 && dogAgeinYears >= 0.333){
+    return dogWeight * 0.05;
+  } else if(dogAgeinYears <= 1 && dogWeight >= 0.583){
+    return dogWeight * 0.04;
+  } else if(dogAgeinYears < 0.333){
+    return dogWeight * 0.10;
+  }  else {
+    return 'please try again'
   }
-  else if(dogAgeinYears >= 1 && dogWeight <= 10 ){
-    return dogWeight * 0.04
-   }
-  else if(dogAgeinYears >= 1 && dogWeight <= 15 ){
-    return dogWeight * 0.03 }
-  else if(dogAgeinYears >= 1 && dogWeight >= 15 ){
-    return dogWeight * 0.02
-  }
-  // puppy weight needs to be fixed and calculation on 2nd and possibly 3rd needs to be reviewed/corrected
-  else if(dogAgeinYears <= 1 && dogWeight <= 25){
-    return dogWeight * 0.10
-  } 
-  else if(dogAgeinYears <= 1 && dogWeight <= 20 ){
-    return dogWeight * 0.05
-  } 
-  else if(dogAgeinYears <= 1 && dogWeight >= 1){
-    return dogWeight * 0.04
-  }w
 }
 
  
@@ -195,18 +188,31 @@ Use the game function below to do the following:
 
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
-
 let computer = Math.random();
-let user = '';
-let conditions = ['rock', 'paper', 'scissors']
+ 
+if(computer <= 0.34) {
+  computer = 'rock';
+}else if(computer <= 0.67) {
+  computer = 'paper';
+}else if(computer >= 0.67) {
+  computer = 'scissors';
+}
 
 function game(user, computer){
   /*add your code here*/
-
+  if(user === computer) {
+    return `it's a tie`
+  } else if( user === 'rock' && computer === 'scissors') {
+    return `you win!`
+  } else if(user === 'paper' && computer === 'rock') {
+    return `you win!`
+  } else if(user === 'scissors' && computer === 'paper') {
+    return 'you win!'
+  } else {
+    return 'you lose!'
+   }
 }
-
-
-
+game('paper', computer)
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Metric Converter 
