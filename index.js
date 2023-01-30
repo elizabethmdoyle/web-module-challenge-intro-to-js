@@ -162,19 +162,15 @@ function hungryDog(dogWeight, dogAgeinYears){
     return dogWeight * 0.02
   }
   // puppy weight needs to be fixed and calculation on 2nd and possibly 3rd needs to be reviewed/corrected
-  else if(dogAgeinYears < 1 && dogWeight  ){
+  else if(dogAgeinYears <= 1 && dogWeight <= 25){
     return dogWeight * 0.10
   } 
-  else if(dogAgeinYears < 1 && dogWeight <= 15 ){
-    return dogWeight * 0.005
+  else if(dogAgeinYears <= 1 && dogWeight <= 20 ){
+    return dogWeight * 0.05
   } 
-  else if(dogAgeinYears < 1 && dogWeight <= 15 ){
+  else if(dogAgeinYears <= 1 && dogWeight >= 1){
     return dogWeight * 0.04
-  }
-    // else(dogAgeinYears < 1){
-
-    //   return console.log('unable to calculate, please try again')
-    // }
+  }w
 }
 
  
@@ -202,6 +198,7 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 let computer = Math.random();
 let user = '';
+let conditions = ['rock', 'paper', 'scissors']
 
 function game(user, computer){
   /*add your code here*/
@@ -257,20 +254,20 @@ Using the annoyingSong function below do the following:
 3. Outside of the function, Make a loop that invokes annoying song with a number that decreases until it gets to 1 bottle left. 
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
+let i = 99
+
 function annoyingSong(number){
       /*add your code here*/
-      return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${{number} - 1} bottles of soda on the wall`
+      return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number -1} bottles of soda on the wall`
 
 }
 
+for(i; i > 1; i--) {
+ console.log(annoyingSong(i))
 
+  
+}
 
-// for(let i = 0, i < 5, i--) {
-//  console.log('the loop has run successfully')
-//   annoyingSong(number)
-
-
-// }
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Grade Calculator
