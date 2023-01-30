@@ -151,30 +151,30 @@ function hungryDog(dogWeight, dogAgeinYears){
   /*add your code here*/
 
   if(dogAgeinYears >= 1 && dogWeight <= 5 ){
-    return dogWeight/dogAgeinYears
+    return dogWeight * 0.05
   }
   else if(dogAgeinYears >= 1 && dogWeight <= 10 ){
-    return
-  }
+    return dogWeight * 0.04
+   }
   else if(dogAgeinYears >= 1 && dogWeight <= 15 ){
-    return
-  }
+    return dogWeight * 0.03 }
   else if(dogAgeinYears >= 1 && dogWeight >= 15 ){
-    return
+    return dogWeight * 0.02
   }
-  else if(dogAgeinYears <= 1 && dogWeight <= 10 ){
-    return
+  // puppy weight needs to be fixed and calculation on 2nd and possibly 3rd needs to be reviewed/corrected
+  else if(dogAgeinYears < 1 && dogWeight  ){
+    return dogWeight * 0.10
   } 
-  else if(dogAgeinYears <= 1 && dogWeight <= 10 ){
-    return
+  else if(dogAgeinYears < 1 && dogWeight <= 15 ){
+    return dogWeight * 0.005
   } 
-  else if(dogAgeinYears <= 1 && dogWeight <= 10 ){
-    return
+  else if(dogAgeinYears < 1 && dogWeight <= 15 ){
+    return dogWeight * 0.04
   }
-  else if(dogAgeinYears < 1){
+    // else(dogAgeinYears < 1){
 
-    return
-  }
+    //   return console.log('unable to calculate, please try again')
+    // }
 }
 
  
@@ -225,7 +225,7 @@ Using the miles function below do the following:
 
 function miles(kilometers){
   /*add your code here*/
-  return kilometers/1.609
+  return kilometers * 0.621371
 }
 
 
@@ -240,6 +240,7 @@ Using the feet function below do the following:
 
 function feet(centimeters){
   /*add your code here*/
+  return centimeters / 30.48
 }
 
 
@@ -252,17 +253,17 @@ Using the annoyingSong function below do the following:
 1. Receive a starting number
 2. The annoying song function should return the following string exactly one time:
 
-    "{number you gave as an argument} bottles of soda on the wall, {number you gave as an argument} bottles of soda, take one down pass it around {number you gave as an argument minus 1} bottles of soda on the wall"
-
+    
 3. Outside of the function, Make a loop that invokes annoying song with a number that decreases until it gets to 1 bottle left. 
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
-
-function annoyingSong(/*add your code here*/){
+function annoyingSong(number){
       /*add your code here*/
+      return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${{number} - 1} bottles of soda on the wall`
+
 }
 
-
+annoyingSong()
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Grade Calculator
