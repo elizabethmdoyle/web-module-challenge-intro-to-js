@@ -203,8 +203,6 @@ let conditions = ['rock', 'paper', 'scissors']
 function game(user, computer){
   /*add your code here*/
 
-
-   
 }
 
 
@@ -312,10 +310,17 @@ HINT - you may need to study tomorrow's content on arrays
 HINT - try looking up the .includes() method
 */
 
+// let word = '';
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
-}
+
+// for(let i = 0; i > 1; i++) {
+
+// }
+
+// function vowelCounter(word) {
+//   /*add your code here*/
+//   return console.log('testing')
+// }
 
 
 
